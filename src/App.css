@@ -1,38 +1,31 @@
-.App {
-  text-align: center;
+:root {
+  --bot-deg: 270deg;
+  --customer-deg: 60deg;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#waveform region[data-id*="bot"] {
+  background-color: transparent !important;
+  backdrop-filter: hue-rotate(var(--bot-deg));
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#waveform region[data-id*="customer"] {
+  background-color: transparent !important;
+  backdrop-filter: hue-rotate(var(--customer-deg));
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#waveform region[data-id*="edit-customer"] {
+  background-color: rgba(128, 128, 128, 0.12) !important;
+  backdrop-filter: hue-rotate(var(--customer-deg));
 }
-
-.App-link {
-  color: #61dafb;
+#waveform region[data-id*="edit-bot"] {
+  background-color: rgba(128, 128, 128, 0.12) !important;
+  backdrop-filter: hue-rotate(var(--bot-deg));
 }
-
-@keyframes App-logo-spin {
+#waveform region {
+  animation: regionin 0.5s ease-in;
+}
+@keyframes regionin {
   from {
-    transform: rotate(0deg);
+    transform: scaleX(0);
   }
   to {
-    transform: rotate(360deg);
+    transform: scaleY(1);
   }
 }

@@ -1,0 +1,17 @@
+#waveform {
+  height: 150px;
+  overflow-y: hidden;
+}
+#tagger {
+  position: absolute;
+  border-radius: 5px;
+  background-color: rgba(197, 197, 197, 0.2);
+  font-size: roboto;
+  transform: translatex(-50%);
+}
+.bot {
+  background-color: green;
+}
+.customer {
+  background-color: red;
+}
